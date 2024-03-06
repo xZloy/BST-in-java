@@ -85,10 +85,10 @@ public class BSTredblack {
         arbol.push(20);
         arbol.push(30);
         arbol.push(15);
-        arbol.push(5);
+        arbol.push(18);
         arbol.push(25);
         arbol.push(35);
-        arbol.push(5);
+        arbol.push(14);
         arbol.push(65);
         arbol.push(75);
         arbol.push(85);
