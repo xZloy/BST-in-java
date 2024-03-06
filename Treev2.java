@@ -95,13 +95,38 @@ public class Treev2 {
         }
     }
 
+    public void printTree() {
+        printTree(this, 0);
+    }
+
+    private void printTree(Treev2 node, int level) {
+        if (node != null) {
+            printTree(node.right, level + 1);
+            for (int i = 0; i < level; i++) {
+                System.out.print("    ");
+            }
+            System.out.println(node.value);
+            printTree(node.left, level + 1);
+        }
+    }
+
     public static void main(String args[]) {
-        Treev2 arbol = new Treev2(5);
-        arbol.setValueroot(5);
-        arbol.push(3);
-        arbol.push(7);
-        arbol.push(2);
+        Treev2 arbol = new Treev2(10);
+        arbol.setValueroot(10);
+        arbol.push(20);
+        arbol.push(30);
+        arbol.push(15);
+        arbol.push(18);
+        arbol.push(25);
+        arbol.push(35);
+        arbol.push(14);
+        arbol.push(65);
+        arbol.push(75);
+        arbol.push(85);
+        arbol.push(95);
+        arbol.push(6);
         arbol.push(4);
+
         System.out.println("Recorrido preorder left");
         arbol.preorderLeft();
         System.out.println("Recorrido preorder right");
@@ -114,6 +139,8 @@ public class Treev2 {
         arbol.inorderLeft();
         System.out.println("Recorrido inorder right");
         arbol.inorderRight();
+        System.out.println("Impresion del arbol");
+        arbol.printTree();
     }
 
 }
